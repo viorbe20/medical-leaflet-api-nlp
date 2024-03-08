@@ -39,7 +39,7 @@ imagen (pondremos una por defecto) (buscar link de imagen en el json que devuelv
     "generico": false,
     "conduc": false,
     "dosis": "250 µg",
-    "img"  
+    "img": "???"
 }
 ```
 
