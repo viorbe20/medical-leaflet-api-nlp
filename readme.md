@@ -1,3 +1,4 @@
+## Requisitos del ejercicio
 1. TTS: La máquina lee un texto preguntando el medicamento 
 2. ASR: usuario responde.
 
@@ -17,16 +18,22 @@ Se inicia el diálogo.
 
     f) Se va haciendo agregación sintagmática
 
+## ejemplo de llamada a api
 
-## Leer
+```python
+n_registro = 1181322002IP
+request => https://cima.aemps.es/cima/rest/medicamento?nregistro={n_registro}
+```
+
+## Info que debemos extraer del json que devuelvela api
     "nombre": "MIRCERA 250 microgramos/0,3 ml SOLUCION INYECTABLE EN JERINGA PRECARGADA",
     "receta": true,
     "generico": false,
     "conduc": false,
      "dosis": "250 µg"
-     img (defecto)
-## Ejemplo de 
+     img (defecto) (buscar link de imagen)
 
+## Ejemplo de json 
 {
     "nregistro": "07400013",
     "nombre": "MIRCERA 250 microgramos/0,3 ml SOLUCION INYECTABLE EN JERINGA PRECARGADA",
