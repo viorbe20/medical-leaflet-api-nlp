@@ -26,12 +26,23 @@ request => https://cima.aemps.es/cima/rest/medicamento?nregistro={n_registro}
 ```
 
 ## Info que debemos extraer del json que devuelvela api
+nombre
+receta
+generico
+condución
+dosis
+imagen (pondremos una por defecto) (buscar link de imagen en el json que devuelva la API)
+```json
+{
     "nombre": "MIRCERA 250 microgramos/0,3 ml SOLUCION INYECTABLE EN JERINGA PRECARGADA",
     "receta": true,
     "generico": false,
     "conduc": false,
     "dosis": "250 µg",
-    img  (defecto) (buscar link de imagen)
+    "img"  
+}
+```
+
 ## Ejemplo de json 
 ```json
 {
