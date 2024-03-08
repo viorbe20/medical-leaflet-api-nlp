@@ -30,10 +30,10 @@ request => https://cima.aemps.es/cima/rest/medicamento?nregistro={n_registro}
     "receta": true,
     "generico": false,
     "conduc": false,
-     "dosis": "250 µg"
-     img (defecto) (buscar link de imagen)
-
+    "dosis": "250 µg",
+    img  (defecto) (buscar link de imagen)
 ## Ejemplo de json 
+```json
 {
     "nregistro": "07400013",
     "nombre": "MIRCERA 250 microgramos/0,3 ml SOLUCION INYECTABLE EN JERINGA PRECARGADA",
@@ -162,3 +162,4 @@ request => https://cima.aemps.es/cima/rest/medicamento?nregistro={n_registro}
     },
     "dosis": "250 µg"
 }
+```
