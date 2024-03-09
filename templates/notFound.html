@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-center">NotFound</h1>
+                <h2>
+                    {% if data %}
+                    <p><center> {{ data.msg }}</center></p>
+                    {% else %}
+                    <p><center>{{ data.msg }}</center></p>
+                    {% endif %}
+                </h2>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

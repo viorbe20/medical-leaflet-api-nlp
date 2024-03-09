@@ -10,9 +10,13 @@
                     Nombre del medicamente: {{ data.nombre }}
                     Tiene receta: <input type="checkbox" {% if data.receta %} checked {% endif %} disabled>
                     Es genérico: <input type="checkbox" {% if data.generico %} checked {% endif %} disabled>
-                    Puedes conducir: <input type="checkbox" {% if data.conducir %} checked {% endif %} disabled>
+                    Afecta a condución: <input type="checkbox" {% if data.conducir %} checked {% endif %} disabled>
                     Dosis: {{ data.dosis }}
-                    Image: <img src="{{ data.image }}" alt="Imagen del medicamento">
+                    Ficha tecnica: <a href="{{ data.fichaTec }}" target="_blank">Ficha técnica</a>
+                    Prospecto: <a href="{{ data.prospecto }}" target="_blank">Prospecto</a>
+                    Imagen: <img src="{% if data.imgCaja %} {{ data.imgCaja }} {% else %} /static/img/medicamento.jpg {% endif %}"
+                    alt="Imagen del medicamento">
+                    
                 </pre>
             </div>
         </div>
