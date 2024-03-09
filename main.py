@@ -7,21 +7,57 @@ from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 import pyttsx3
 import speech_recognition as sr
+import pyaudio
+import requests
 
+API_URL = "https://cima.aemps.es/cima/rest/medicamento"
 
 app = Flask(__name__)
 
 # Obtiene el path del directorio actual
 script_dir = os.path.dirname(__file__)
 model_path = os.path.join(script_dir, 'data', 'Medicamentos.xlsx')
+df = None
 
-# Lee el archivo Excel
-df = pd.read_excel(model_path)
-# Leer linea por linea del excel
-for index, row in df.iterrows():
-    if 'MIRCERA' in row['medicamento']:
-        print(row['nregistro'])
+def read_excel():
+    """Lee el archivo Excel y lo almacena en un DataFrame de Pandas, actualiza la variable global df."""
+    global df
+    df = pd.read_excel(model_path)
 
+def search_number_medicine(medicine_name):
+    """Busca un medicamento en el archivo Excel y devuelve el número de registro asociado."""
+    if df is None:
+        read_excel()
+    
+    medicine_name = medicine_name.upper()
+    medicine_data = df[df['medicamento'].str.contains(medicine_name)]
+    if len(medicine_data) > 0:
+        return medicine_data['nregistro'].values[0]
+    else:
+        return None
+
+
+def text_to_speech(text):
+    """Convierte texto a voz."""
+    engine = pyttsx3.init()
+    engine.say(text)
+    engine.runAndWait()
+
+def make_request(number):
+    """Realiza una petición a la API de la AEMPS para obtener información sobre un medicamento."""
+    response = requests.get(f"{API_URL}?nregistro={number}")
+    if response.status_code == 200:
+        return response.json()
+    else:
+        return None
+    
+def get_medicine_info(medicine_name):
+    """Obtiene información sobre un medicamento."""
+    number = search_number_medicine(medicine_name)
+    if number:
+        return make_request(number)
+    else:
+        return None
 
 @app.route('/', methods=['GET'])
 def home():
@@ -97,6 +133,19 @@ def home():
     
     # Renderiza la página
     return render_template('home.html')
+
+@app.route('/test', methods=['GET'])
+def test():
+    data = get_medicine_info("ibuprofeno")
+    showable_data = {
+        "nombre": data["nombre"],
+        "receta": data["receta"],
+        "generico": data["generico"],
+        "conduc": data["conduc"],
+        "dosis": data["dosis"],
+        "img": "???"
+    }
+    return render_template('test.html', data=showable_data)
     
 
 if __name__ == '__main__':
