@@ -5,7 +5,7 @@
     <div class="container mt-5">
         <div class="row">
             <div class="col-md-12">
-                <h1 class="text-center">Este es el test</h1>
+                <h1 class="text-center">Este es el medicamento y sus datos</h1>
                 <pre>
                     Nombre del medicamente: {{ data.nombre }}
                     Tiene receta: <input type="checkbox" {% if data.receta %} checked {% endif %} disabled>
@@ -17,8 +17,10 @@
                     Imagen: <img src="{% if data.imgCaja %} {{ data.imgCaja }} {% else %} /static/img/medicamento.jpg {% endif %}"
                     alt="Imagen del medicamento">
                     
+                    <center><button><a href="/">Volver</a></button><center/>
                 </pre>
             </div>
+            
         </div>
     </div>
 </section>

@@ -14,14 +14,7 @@
 
     <script>
         function enviarClick() {
-            // Enviar una solicitud POST a la ruta '/click' en el servidor
-            fetch('/', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ clicked: true }),
-            });
+            window.location.href = "/information";
         }
     </script>
 </section>
