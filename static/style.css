@@ -39,11 +39,21 @@ header {
     border-radius: 10px;
 }
 
-#mic_home{
-    width: 10%;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+#mic_box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 0px;
+}
 
+#mic_home {
+    width: 10%;
+    transition: width 0.3s ease; /* Agrega una transición para suavizar el cambio de ancho */
+    cursor: pointer;
+}
+
+#mic_home:hover {
+    cursor: pointer;
 }
 
 #robot_box{
@@ -60,13 +70,7 @@ header {
     font-size: 11px;
     font-style: italic;
 }
-.mic{
-    justify-content: space-around;
-    display: flex;
-    align-items: center;
-    padding-left: 10%;
-    padding-right: 10%;
-}
+
 .right{
     margin-left: auto;
 }
