@@ -36,6 +36,9 @@ def information():
     else:
         print("No se ha detectado ninguna entrada de voz.")
 
+    if not processed_data["noun_phrases"]:
+        return render_template('notFound.html', data={"msg": "No se ha detectado el nombre de un medicamento."})
+    
     data = get_medicine_info(processed_data["noun_phrases"][0])
     # print(data["fotos"][0]["url"])
 
