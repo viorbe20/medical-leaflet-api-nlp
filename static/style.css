@@ -1,19 +1,28 @@
 body{
-    background-color: #97d5c8;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #F0F0F0;
 }
+
 h1{
     color: #333;
     margin-bottom: 5%;
     padding-top: 1%;
 }
+
+header {
+    background-color: #F2F2F2;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Ajusta los valores según tus preferencias */
+    height: 80%;
+}
+
+
 .contentHeader{
-    background-color: #6FFFEC;
-    background-color: #333;
-    color: white;
-    font-size: 14px;
-    padding-top: 0.5%;
-    padding-left: 1%;
-    padding-right: 1%;
+    color: #38659C;
+    font-size:18px;
+    padding: 1.5%;
     display: flex;
     justify-content: space-between;
 }
@@ -23,9 +32,29 @@ h1{
     padding: 10px;
     margin-top: 10%;
 }
+
+#img_home{
+    width: 40%;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+#mic_home{
+    width: 10%;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+
+}
+
+#robot_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .robot-perdido{
     text-align: center;
 }
+
 .pie_foto{
     font-size: 11px;
     font-style: italic;
@@ -55,10 +84,11 @@ h1{
     padding-right: 1%;
     width: 100%;
 }
-.titleFooter{
-    background-color: inherit;
-    display: inline;
+
+footer {
+background-color: #3F434B;
 }
+
 .contentFooter{
     background-color: inherit;
     text-align: end;
