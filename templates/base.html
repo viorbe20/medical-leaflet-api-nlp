@@ -7,8 +7,26 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    {% block header %}Este es el header{% endblock %}
+    {% block header %}
+    <header>
+        <div class="contentHeader">
+            <p>Elaboración de un sistema de PLN orientad a una tarea específica</p>
+            <p>Modelos de Inteligencia Artificial</p>
+        </div>
+    </header>
+    {% endblock %}
     {% block content %}{% endblock %}
-    {% block footer %}Este es el footer{% endblock %}
+    {% block footer %}
+    <footer>
+        <div class="aboutUs">
+            <div class="titleFooter">
+                <p>Esta página ha sido realizada por los siguientes miembros:</p>
+            </div>
+            <div class="contentFooter">
+                <p>Virginia Ordoño Bernier<br>Jose Luis [...]<br>Jose Miguel [...]<br>Rosa Moreno López<br>Álvaro Cañas González</p>
+            </div>
+        </div>
+    </footer>
+    {% endblock %}
 </body>
 </html>

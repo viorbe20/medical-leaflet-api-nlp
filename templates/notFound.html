@@ -5,7 +5,11 @@
     <div class="container mt-5">
         <div class="row">
             <div class="col-md-12">
-                <h1 class="text-center">NotFound</h1>
+                <h1 class="text-center">Medicamento no encontrado, pulse en la imagen para volver</h1>
+                <div class="robot-perdido">
+                    <img src="/static/img/not-found.jpg" width="600" height="500" alt="robot perdido" id="img" onclick="volver()">
+                    <p class="pie_foto">Esta imagen ha sido generada mendiate Microsoft Copilot.</p>
+                </div>
                 <h2>
                     {% if data %}
                     <p><center> {{ data.msg }}</center></p>
@@ -16,5 +20,10 @@
             </div>
         </div>
     </div>
+    <script>
+        function volver() {
+            window.location.href = "/";
+        }
+    </script>
 </section>
 {% endblock %}

@@ -1,3 +1,65 @@
-*{
-    background-color: rgb(184, 209, 184);
+body{
+    background-color: #97d5c8;
+}
+h1{
+    color: #333;
+    margin-bottom: 5%;
+    padding-top: 1%;
+}
+.contentHeader{
+    background-color: #6FFFEC;
+    background-color: #333;
+    color: white;
+    font-size: 14px;
+    padding-top: 0.5%;
+    padding-left: 1%;
+    padding-right: 1%;
+    display: flex;
+    justify-content: space-between;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 10%;
+}
+.robot-perdido{
+    text-align: center;
+}
+.pie_foto{
+    font-size: 11px;
+    font-style: italic;
+}
+.mic{
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.right{
+    margin-left: auto;
+}
+.left{
+    margin-right: auto;
+}
+.aboutUs{
+    display: flex;
+    justify-content: space-between;
+    flex-shrink: 0;
+    background-color: #333;
+    color: white;
+    font-size: 13px;
+    padding: 10px 1;
+    padding-left: 1%;
+    padding-right: 1%;
+    width: 100%;
+}
+.titleFooter{
+    background-color: inherit;
+    display: inline;
+}
+.contentFooter{
+    background-color: inherit;
+    text-align: end;
 }

@@ -5,13 +5,19 @@
     <div class="container mt-5">
         <div class="row">
             <div class="col-md-12">
-                <h1 class="text-center">Este es el home</h1>
+                <h1 class="text-center">Prospectos farmacéuticos</h1>
                 <!-- Botón "Comenzar a hablar" -->
-                <img src="/static/img/medicamento.jpg" alt="Imagen" id="miImagen" onclick="enviarClick()">
+                <div class="robot_farmaceutico">
+                    <img src="/static/img/robot-farmaceutico1.jpg" width="600" height="500" alt="robot farmacéutico" id="img">
+                    <p class="pie_foto">Esta imagen ha sido generada mendiate Microsoft Copilot.</p>
+                </div>
+                <div class="mic">
+                    <p class="left">Pulse en el micrófono para comenzar a hablar:</p>
+                    <img src="/static/img/mic.png" width="124" height="124" class="right" alt="micrófono" id="miImagen" class="microfono" onclick="enviarClick()">
+                </div>
             </div>
         </div>
     </div>
-
     <script>
         function enviarClick() {
             window.location.href = "/information";
