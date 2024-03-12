@@ -63,6 +63,15 @@ def information():
         "prospecto": data["docs"][1]["url"],
         "imgCaja": data["fotos"][0]["url"],
     }
+
+    text_to_speech(f"""
+                Nombre del medicamento: {showable_data["nombre"]}
+                Tiene receta: {"Sí" if showable_data["receta"] == True else "No"}
+                Es genérico: {"Sí" if showable_data["generico"] == True else "No"}
+                Afecta a condución: {"Sí" if showable_data["conduc"] == True else "No"}
+                Dosis: { showable_data["dosis"] }
+                """)
+
     return render_template('information.html', data=showable_data)
     
 @app.route('/notFound', methods=['GET'])
