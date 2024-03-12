@@ -3,7 +3,7 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #F0F0F0;
+    background-color: white;
 }
 
 h1{
@@ -17,7 +17,6 @@ header {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Ajusta los valores según tus preferencias */
     height: 80%;
 }
-
 
 .contentHeader{
     color: #38659C;
@@ -34,9 +33,10 @@ header {
 }
 
 #img_home{
-    width: 40%;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+    width: 400px;
+    height: 400px;
 }
 
 #mic_box{
@@ -71,17 +71,10 @@ header {
     font-style: italic;
 }
 
-.right{
-    margin-left: auto;
-}
-.left{
-    margin-right: auto;
-}
 .aboutUs{
     display: flex;
     justify-content: space-between;
     flex-shrink: 0;
-    background-color: #333;
     color: white;
     font-size: 13px;
     padding: 10px 1;
@@ -91,10 +84,5 @@ header {
 }
 
 footer {
-background-color: #3F434B;
-}
-
-.contentFooter{
-    background-color: inherit;
-    text-align: end;
+background-color: #293171;
 }

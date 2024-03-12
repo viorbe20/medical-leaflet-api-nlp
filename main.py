@@ -20,7 +20,6 @@ def home():
 
 @app.route('/information', methods=['GET'])
 def information():
-    # Iniciar el diálogo. sin no habla da errro. controlar eso
     text_to_speech("Por favor, indique el nombre del medicamento del cual desea obtener información.")
     try:
         user_input = speech_to_text()
@@ -28,7 +27,10 @@ def information():
         return render_template('notFound.html', data={"msg": "No se ha detectado ninguna entrada de voz, recarga la página y vuelve a intentarlo."})
     
     if user_input:
+        
         processed_data = process_text(user_input)
+        
+        
         print("Texto limpio:", processed_data["cleaned_text"])
         print("Verbos de acción:", processed_data["action_verbs"])
         print("Valores numéricos:", processed_data["numeric_values"])
@@ -37,7 +39,7 @@ def information():
         print("No se ha detectado ninguna entrada de voz.")
 
     if not processed_data["noun_phrases"]:
-        return render_template('notFound.html', data={"msg": "No se ha detectado el nombre de un medicamento."})
+        return render_template('notFound.html')
     
     data = get_medicine_info(processed_data["noun_phrases"][0])
     # print(data["fotos"][0]["url"])
