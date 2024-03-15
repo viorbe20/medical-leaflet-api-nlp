@@ -105,8 +105,8 @@ Este proyecto está licenciado bajo la licencia MIT.
 [subir](#contenido)
 
 ### 9. Autores
-[Álvaro Cañas González](https://github.com/MameHub)
-[José Miguel Escribano Ruiz](https://github.com/JMER15)
-[Rosa Moreno López](https://github.com/rosaml96)
-[Virginia Ordoño Bernier](https://github.com/viorbe20)
-[Jose Luis Pérez Lara](https://github.com/JoseLuixrax)
+- [Álvaro Cañas González](https://github.com/MameHub)
+- [José Miguel Escribano Ruiz](https://github.com/JMER15)
+- [Rosa Moreno López](https://github.com/rosaml96)
+- [Virginia Ordoño Bernier](https://github.com/viorbe20)
+- [Jose Luis Pérez Lara](https://github.com/JoseLuixrax)
