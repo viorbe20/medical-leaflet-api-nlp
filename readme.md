@@ -81,24 +81,42 @@ request => https://cima.aemps.es/cima/rest/medicamento?nregistro={n_registro}
 
 ### 7. Uso de la aplicación
 1. Inicio
-El usuario accede a la página de inicio donde se le muestra un botón.
 
-Accederá con la url: ``` 127.0.0.1:5000```
+    El usuario accede a la página de inicio donde se le muestra un botón.
 
-1. Interacción de Voz
-Cuando el usuario hace clic en el botón, se solicita al usuario que pronuncie el nombre del medicamento del que desea obtener información.
+    Accederá con la url: ``` 127.0.0.1:5000```
 
-1. Procesamiento de texto
-La entrada de voz del usuario se convierte en texto y se procesa para extraer el nombre del medicamento.
+    ![homepage](static/img/homepage.png)
 
-1. Llamada a API
-Una vez detectado el nombre del medicamento busca en el excel adjunto su numero de referencia el cual, usa para hacer un llamamiento a la API de CIMA (Centro de información de medicamentos). Esa llamada devuelve un json con información  del medicamento.
+2. Interacción de Voz
 
-1. Obtención y visualización de información
-La información extraida de la json se muestra al usuario por pantalla. Esa misma página permite acceder de nuevo a la página de inicio.
+    Cuando el usuario hace clic en el botón, se solicita al usuario que pronuncie el nombre del medicamento del que desea obtener información.
 
-1. Manejo de Errores
-Si no se encuentra información sobre el medicamento, se mostrará un mensaje de error.
+    ![button to speak](<static/img/Button to speak.png>)
+
+3. Procesamiento de texto
+
+    La entrada de voz del usuario se convierte en texto y se procesa para extraer el nombre del medicamento.
+
+    ![proccess text](<static/img/Proccess text.png>)
+
+4. Llamada a API
+
+    Una vez detectado el nombre del medicamento busca en el excel adjunto su numero de referencia el cual, usa para hacer un llamamiento a la API de CIMA (Centro de información de medicamentos). Esa llamada devuelve un array con información  del medicamento.
+
+    ![register medicament](<static/img/register medicament.png>)
+
+5. Obtención y visualización de información
+
+    La información extraida del array se muestra al usuario por pantalla. Esa misma página permite acceder de nuevo a la página de inicio.
+
+    ![view result](<static/img/view result.jpeg>)
+
+6. Manejo de Errores
+
+    Si no se encuentra información sobre el medicamento, se mostrará un mensaje de error.
+
+    ![error page](<static/img/error page.jpeg>)
 
 [subir](#contenido)
 
