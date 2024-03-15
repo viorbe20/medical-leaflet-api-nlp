@@ -7,16 +7,17 @@
             <div class="col-md-12">
                 <h1 class="text-center">Este es el medicamento y sus datos</h1>
                 <pre>
-                    Nombre del medicamento: {{ data.nombre }}
-                    Tiene receta: <input type="checkbox" {% if data.receta %} checked {% endif %} disabled>
-                    Es genérico: <input type="checkbox" {% if data.generico %} checked {% endif %} disabled>
-                    Afecta a condución: <input type="checkbox" {% if data.conducir %} checked {% endif %} disabled>
-                    Dosis: {{ data.dosis }}
-                    Ficha tecnica: <a href="{{ data.fichaTec }}" target="_blank">Ficha técnica</a>
-                    Prospecto: <a href="{{ data.prospecto }}" target="_blank">Prospecto</a>
-                    Imagen: <img src="{% if data.imgCaja %} {{ data.imgCaja }} {% else %} /static/img/medicamento.jpg {% endif %}"
-                    alt="Imagen del medicamento">
-                    
+                    - Nombre del medicamento: {{ data.nombre }}
+                    - Tiene receta: <input type="checkbox" {% if data.receta %} checked {% endif %} disabled>
+                    - Es genérico: <input type="checkbox" {% if data.generico %} checked {% endif %} disabled>
+                    - Afecta a la condución: <input type="checkbox" {% if data.conducir %} checked {% endif %} disabled>
+                    - Dosis: {{ data.dosis }}
+                    - Ficha tecnica: <a href="{{ data.fichaTec }}" target="_blank">Ficha técnica</a>
+                    - Prospecto: <a href="{{ data.prospecto }}" target="_blank">Prospecto</a>
+                    <div id='robot_box'>
+                        <img src="{% if data.imgCaja %} {{ data.imgCaja }} {% else %} /static/img/medicamento.jpg {% endif %}"
+                        alt="Imagen del medicamento" id="img_home">
+                    </div>
                     <center><button><a href="/">Volver</a></button><center/>
                 </pre>
             </div>

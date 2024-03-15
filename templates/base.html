@@ -5,31 +5,31 @@
     <title>{% block title %}Información Medicamentos{% endblock %}</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
 </head>
 <body>
     {% block header %}
-    <header>
-        <div class="contentHeader">
-            <p>Elaboración de un sistema de PLN orientado a una tarea específica</p>
-            <p>Modelos de Inteligencia Artificial</p>
+    <header class="contentHeader">
+        <div>
+            <p style="text-align: center; font-size: 30px;">Medical Leaflet NLP</p>
+            <p style="text-align: center;">Modelos de Inteligencia Artificial</p>
         </div>
     </header>
     {% endblock %}
+
     {% block content %}{% endblock %}
+
     {% block footer %}
-    <footer>
-        <div class="aboutUs">
-            <div class="titleFooter">
-                <p>Copyright © 2024</p>
-            </div>
-            <div class="contentFooter">
-                <p>
-                    Álvaro Cañas González (Desarrollador Web)<br>
-                    José Miguel Escribano Ruiz (Desarrollador Web)<br>
-                    Rosa Moreno López (Desarrolladora Web)<br>
-                    Jose Luis Pérez Lara (Desarrollador Web)<br>
-                    Virginia Ordoño Bernier (Desarrolladora Web)<br>
-                </p>
+    <footer id="footer">
+        <div>
+            <p style="text-align: center; font-size: 20px;">© 2024 Medical Leaflet NLP Todos los derechos están reservados</p>
+            <!-- Cargar los iconos de facebook, tweeter, instagran tik tok , facebook con los iconos -->
+            <div class="icons_footer">
+                <a href="#"><i class="fab fa-facebook" id="icons"></i></a>
+                <a href="#"><i class="fab fa-twitter" id="icons"></i></a>
+                <a href="#"><i class="fab fa-instagram" id="icons"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in" id="icons"></i></a>
+                <a href="#"><i class="fab fa-snapchat" id="icons"></i></a>
             </div>
         </div>
     </footer>

@@ -1,46 +1,48 @@
-body{
+body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     background-color: white;
 }
 
-h1{
-    color: #333;
-    margin-bottom: 5%;
-    padding-top: 1%;
+h1 {
+    color: black;
+    font-size: 25px;
+    margin-bottom: 20px;
 }
 
-header {
-    background-color: #F2F2F2;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Ajusta los valores según tus preferencias */
-    height: 80%;
-}
-
-.contentHeader{
-    color: #38659C;
-    font-size:18px;
-    padding: 1.5%;
+.contentHeader {
+    width: 100%;
+    background-color: #293171;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
-.container{
+
+.container {
     display: flex;
     justify-content: center;
-    padding: 10px;
-    margin-top: 10%;
 }
 
-#img_home{
+#img {
+    width: 30%;
+}
+
+#img_home {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    width: 400px;
-    height: 400px;
+    width: 220px;
+    height: 220px;
+    margin: 20px;
 }
 
-#mic_box{
+#mic_box {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 2px 0px;
@@ -48,7 +50,8 @@ header {
 
 #mic_home {
     width: 10%;
-    transition: width 0.3s ease; /* Agrega una transición para suavizar el cambio de ancho */
+    transition: width 0.3s ease;
+    /* Agrega una transición para suavizar el cambio de ancho */
     cursor: pointer;
 }
 
@@ -56,33 +59,39 @@ header {
     cursor: pointer;
 }
 
-#robot_box{
+#robot_box {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.robot-perdido{
+.robot-perdido {
     text-align: center;
 }
 
-.pie_foto{
+.pie_foto {
     font-size: 11px;
     font-style: italic;
 }
 
-.aboutUs{
-    display: flex;
-    justify-content: space-between;
-    flex-shrink: 0;
+footer {
+    background-color: #293171;
     color: white;
-    font-size: 13px;
-    padding: 10px 1;
-    padding-left: 1%;
-    padding-right: 1%;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
     width: 100%;
 }
 
-footer {
-background-color: #293171;
+.icons_footer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    column-gap: 30px;
+}
+
+#icons{
+    font-size: 30px;
+    color: white;
 }
