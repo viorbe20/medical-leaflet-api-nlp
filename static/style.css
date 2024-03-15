@@ -37,7 +37,6 @@ h1 {
     border-radius: 10px;
     width: 220px;
     height: 220px;
-    margin: 20px;
 }
 
 #mic_box {
@@ -63,6 +62,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 20px;
 }
 
 .robot-perdido {

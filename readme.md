@@ -23,28 +23,28 @@ El propósito principal es proporcionar a los usuarios información variada sobr
 [subir](#contenido)
 
 ### 3. Tecnologías utilizadas
-[Flask](https://flask.palletsprojects.com/en/3.0.x/)
+- [Flask](https://flask.palletsprojects.com/en/3.0.x/)
 Framework para Python. Se utiliza en este proyecto para crear la aplicación web y manejar las rutas y las solicitudes HTTP.
 
-[SpaCy](https://spacy.io)
+- [SpaCy](https://spacy.io)
 Biblioteca de procesamiento de lenguaje natural (NLP) de código abierto. Se utiliza para el procesamiento de texto, incluyendo tokenización, análisis gramatical y extracción de información. La clase _Matcher_ es una clase de SpaCy que permite realizar coincidencias de patrones en texto utilizando reglas definidas. Se utiliza para encontrar patrones específicos en el texto, como verbos de acción o frases nominales.
 
-[NLTK](https://www.nltk.org/install.html)
+- [NLTK](https://www.nltk.org/install.html)
 _wordtokenize_ es una función de NLTK que divide el texto en palabras o tokens. Se utiliza para tokenizar el texto en palabras individuales.
 
-_corpus.stopwords_ es una lista de palabras comunes que se pueden filtrar del texto durante el procesamiento de lenguaje natural.
+- **Corpus.stopwords_** es una lista de palabras comunes que se pueden filtrar del texto durante el procesamiento de lenguaje natural.
 Se utiliza para eliminar palabras irrelevantes del texto, como por ejemplo artículos.
 
-[pyttsx3](https://pypi.org/project/pyttsx3/)
+- [pyttsx3](https://pypi.org/project/pyttsx3/)
 Biblioteca para texto a voz (TTS) en Python. Se utiliza para convertir texto en voz para la interacción con el usuario.
 
-[Speech Recognition](https://pypi.org/project/SpeechRecognition/)
+- [Speech Recognition](https://pypi.org/project/SpeechRecognition/)
 Biblioteca para reconocimiento de voz en Python. Se utiliza para convertir la entrada de voz del usuario en texto utilizable por la aplicación.
 
-[Pyaudio](https://pypi.org/project/PyAudio/)
+- [Pyaudio](https://pypi.org/project/PyAudio/)
 Módulo de Python para acceder a los dispositivos de audio. Se utiliza para la captura y reproducción de audio, especialmente en el contexto de reconocimiento de voz.
 
-[Textdistance](https://pypi.org/project/textdistance/)
+- [Textdistance](https://pypi.org/project/textdistance/)
 Biblioteca de Python que proporciona funciones para calcular la distancia entre cadenas de texto. Se puede utilizar para comparar y encontrar similitudes entre cadenas de texto.
 
 [subir](#contenido)
@@ -59,8 +59,9 @@ Biblioteca de Python que proporciona funciones para calcular la distancia entre 
 ### 5. Estructura del Proyecto
 - main.py. Contiene el código principal de la aplicación Flask.
 - functions.py. Contiene las funciones relacionadas con el procesamiento de voz, texto y búsqueda de información en el archivo de Excel.
-- Medicamentos.xlsx. Un archivo Excel que almacena la información sobre los medicamentos.
-- templates: contiene la parte gráfica del proyecto.
+- data: Aquí es donde se alojará Medicamentos.xlsx, bases de datos etc.
+- templates: contiene la parte gráfica del proyecto, los .html de los archivos.
+- static: se alojarán el css de la web y las imágenes.
 
 [subir](#contenido)
 
@@ -82,19 +83,21 @@ request => https://cima.aemps.es/cima/rest/medicamento?nregistro={n_registro}
 1. Inicio
 El usuario accede a la página de inicio donde se le muestra un botón.
 
-2. Interacción de Voz
+Accederá con la url: ``` 127.0.0.1:5000```
+
+1. Interacción de Voz
 Cuando el usuario hace clic en el botón, se solicita al usuario que pronuncie el nombre del medicamento del que desea obtener información.
 
-3. Procesamiento de texto
+1. Procesamiento de texto
 La entrada de voz del usuario se convierte en texto y se procesa para extraer el nombre del medicamento.
 
-4. Llamada a API
+1. Llamada a API
 Una vez detectado el nombre del medicamento busca en el excel adjunto su numero de referencia el cual, usa para hacer un llamamiento a la API de CIMA (Centro de información de medicamentos). Esa llamada devuelve un json con información  del medicamento.
 
-4. Obtención y visualización de información
+1. Obtención y visualización de información
 La información extraida de la json se muestra al usuario por pantalla. Esa misma página permite acceder de nuevo a la página de inicio.
 
-5. Manejo de Errores
+1. Manejo de Errores
 Si no se encuentra información sobre el medicamento, se mostrará un mensaje de error.
 
 [subir](#contenido)
